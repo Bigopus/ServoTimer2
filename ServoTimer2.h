@@ -104,7 +104,7 @@ typedef struct {
 
   byte remainder;
 
-}  servo_t;
+}  servo_t2;
 
 class ServoTimer2
 {
