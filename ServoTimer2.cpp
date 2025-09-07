@@ -14,7 +14,7 @@ static void writeChan(uint8_t chan, int pulsewidth);
 #define FRAME_SYNC_DELAY   ((FRAME_SYNC_PERIOD - ( NBR_CHANNELS * DEFAULT_PULSE_WIDTH))/ 128) // number of iterations of the ISR to get the desired frame rate
 #define DELAY_ADJUST	 8		 // number of microseconds of calculation overhead to be subtracted from pulse timings   
 
-static servo_t servos[NBR_CHANNELS+1];    // static array holding servo data for all channels
+static servo_t2 servos[NBR_CHANNELS+1];    // static array holding servo data for all channels
 
 static volatile uint8_t Channel;   // counter holding the channel being pulsed
 static volatile uint8_t ISRCount;  // iteration counter used in the interrupt routines;
@@ -132,3 +132,4 @@ static void initISR()
 } 
 
  
+
